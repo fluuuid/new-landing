@@ -26,6 +26,8 @@ const Projects = ({ data: { loading, error, projects } }) => {
     const projectsToSort = [].concat(projects)
       .sort((a, b) => (a.order || 0) - (b.order || 0))
       .reverse()
+
+    console.log(projectsToSort)
     return (
       <Wrapper>
         <Ul>
@@ -49,6 +51,7 @@ const query = gql`
               title
               image {
                 url
+                handle
               }
               order
               url

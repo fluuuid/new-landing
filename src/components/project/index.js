@@ -175,7 +175,7 @@ export default class extends Component {
       description,
       fwa,
       awwwards,
-      index,
+      index
     } = this.props
 
     return (
@@ -185,7 +185,7 @@ export default class extends Component {
             {fwa && <FWA href={fwa} target='_blank' />}
             {awwwards && <Awwwards href={awwwards} target='_blank' />}
             <a href={url} target='_blank'>
-              <Image show={showDetails} src={image.url} />
+              <Image show={showDetails} src={`https://media.graphcms.com/compress/${image.handle}`} />
               <Content show={showDetails}>
                 <Title show={showDetails}>{title}</Title>
                 <Description show={showDetails}>{description}</Description>

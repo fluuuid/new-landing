@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "aws s3 sync . --profile fluuuid s3://fluuu.id/old --exclude '*.git/*' --exclude 'node_modules/*' --exclude 'npm-debug.log' --delete"
+    "deploy": "aws s3 sync build --profile fluuuid s3://fluuu.id/old --exclude '.git' --exclude 'node_modules/*' --exclude 'npm-debug.log' --delete"
   },
   "devDependencies": {
     "babel-eslint": "8.2.6",
